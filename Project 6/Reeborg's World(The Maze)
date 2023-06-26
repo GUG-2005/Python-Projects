@@ -1,0 +1,31 @@
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def m():
+    turn_left()
+    move()
+
+def m1():
+    turn_right()
+    move()
+    turn_right()
+    move()
+
+while(at_goal() == False):
+    if wall_in_front() == True and wall_on_right() == True:
+        while(wall_in_front() and wall_on_right()):
+            turn_left()
+
+    if wall_in_front() == False and wall_on_right() == True:
+        while(wall_in_front()==False and wall_on_right()):
+            move()
+    if wall_in_front() == True and wall_on_right() == False and at_goal() == False:
+        turn_right()
+        move()
+
+    if wall_in_front() == False and wall_on_right() == False:
+        while(wall_in_front()==False and wall_on_right()==False):
+            turn_right()
+            move()
